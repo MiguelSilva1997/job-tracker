@@ -6,3 +6,7 @@ All Jobs for <strong><%= @company.name %></strong>
   </ul>
 
 <% end %>
+
+<%= render partial: "contact_form" %>
+
+<%= render partial: "contact", collection: @company.contacts.reverse %>

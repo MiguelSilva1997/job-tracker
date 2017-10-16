@@ -1,0 +1,7 @@
+<h3>Comments</h3>
+  <p>
+    <%= comment.content %>
+  </p>
+
+<p>Posted on: <%= distance_of_time_in_words(comment.job.created_at, comment.created_at)%> later
+</p>
