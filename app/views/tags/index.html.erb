@@ -1,5 +1,13 @@
-All Tags
+<header>
+  <h1>All Tags</h1>
+  <h2><%= link_to "New Tags", new_tag_path %></h2><br>
+</header>
 
-<% @tags.each do |tag| %>
-  <%= link_to tag.title, tag_path(tag)%>
-<% end %>
+  <% @tags.each do |tag| %>
+  <div class="card">
+    <h1><%= tag.title %></h1>
+    <p class="title">  <%= link_to "Edit", edit_tag_path(tag) %></p>
+    <p><%= link_to "Delete", tag_path(tag), method: "delete" %></p>
+    <p><button><%= link_to "Show", tag_path(tag) %></button></p>
+  </div><br>
+  <% end %>

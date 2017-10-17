@@ -5,8 +5,8 @@
   <%= hidden_field_tag "tag[job_ids][]", nil %>
   <% Job.all.each do |job|%>
     <%= check_box_tag "tag[job_ids][]", job.id,
-     @tag.job_ids.include?(job.id), id: "job-#{tag.id}" %>
-    <%= label_tag "job-#{job.id}", job.title %><br>
+     @tag.job_ids.include?(job.id), id: dom_id(job) %>
+    <%= label_tag dom_id(job), job.title %><br>
   <% end %>
   <%= f.submit %>
 <% end %>
