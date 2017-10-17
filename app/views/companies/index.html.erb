@@ -6,7 +6,7 @@
 <div class="column">
 <% @companies.each do |company| %>
 <div class="card">
-  <h1><%= company.name %></h1>
+  <h2><%= company.name %></h2>
   <p class="title">  <%= link_to "Edit", edit_company_path(company) %></p>
   <p><%= link_to "Delete", company_path(company), method: "delete" %></p>
   <p><button><%= link_to "Show", company_path(company) %></button></p>
