@@ -3,6 +3,8 @@ class Job < ApplicationRecord
   belongs_to :category
   belongs_to :company
   has_many :comments
+  has_many :taggings
+  has_many :tags, through: :taggings
 
   def self.location
     order("city ASC")

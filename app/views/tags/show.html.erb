@@ -1,0 +1,15 @@
+<h1><%= @tag.title %></h1>
+
+<% @tag.jobs.each do |job| %>
+    Title: <%= job.title %>
+    <br>
+
+    Description: <%= job.description %>
+    <br>
+
+    Level of Interest: <%= job.level_of_interest %>
+    <br>
+
+    City: <%= job.city %>
+    <br>
+<% end %>
