@@ -28,7 +28,7 @@ class CategoriesController < ApplicationController
   def update
     @category.update(category_params)
     if @category.save
-      flash[:success] = "You have succesfully updated this category: #{Category.title}"
+      flash[:success] = "You have succesfully updated this category: #{@category.title}"
       redirect_to category_path(@category)
     else
       render :edit
@@ -38,8 +38,8 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
 
-    flash[:success] = "You have succesfully deleted this category: #{@category.title}"
-    redirect_to category_path
+    flash[:success] = "You have succesfully deleted this category"
+    redirect_to categories_path
   end
 
   private
