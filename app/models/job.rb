@@ -15,7 +15,7 @@ class Job < ApplicationRecord
   end
 
   def self.count_of_jobs_by_interest
-    group(:level_of_interest).order("count(level_of_interest) DESC").count(:id)
+    group(:level_of_interest).order("level_of_interest DESC").count(:id)
   end
 
   def self.count_by_city

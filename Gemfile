@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'faker'
 gem 'faraday'
+gem 'figaro'
 
 gem 'chartkick'
 gem 'groupdate'

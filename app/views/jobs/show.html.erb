@@ -11,7 +11,7 @@
     width="600"
     height="450"
     frameborder="0" style="border:0"
-    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAA9FvZe6joGMF9CJzGK95FSm51CAVeLv4&q=<%= @job.city %>" allowfullscreen>
+    src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["google_map_key"] %>&q=<%= @job.city %>" allowfullscreen>
   </iframe>
   </section>
   <h1><%= render partial: "comment_form" %></h1>

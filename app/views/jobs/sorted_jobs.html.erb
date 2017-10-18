@@ -1,9 +1,9 @@
 <% @jobs.each do |job|%>
-  <ul>
-     <li><%= job.company.name %></li>
-     <li><%= job.title %></li>
-     <li><%= job.description %> </li>
-     <li><%= job.level_of_interest %></li>
-     <li><%= job.city %></li>
-  </ul>
-  <% end %>
+<div class="cards">
+  <h1><%= job.company.name %></h1>
+  <p class="titles"><%= job.title %></p>
+  <p><%= job.description %></p>
+  <a><%= job.level_of_interest %></a>
+  <p><button><%= job.city %></button></p>
+</div>
+<% end %>

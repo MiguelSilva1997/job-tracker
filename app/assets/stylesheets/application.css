@@ -167,3 +167,20 @@ header{
     border-radius: 25px;
     background-color: #f1f1f1;
 }
+
+.cards {
+    background-color: silver;
+    flex: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 340px;
+    min-width: 340px;
+    max-height: 250px;
+    min-height: 250px;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.titles {
+    color: grey;
+    font-size: 18px;
+}

@@ -23,12 +23,30 @@
   <body class="dashboard">
     <section class="pie-chart-container">
       <h1>Top 3 Companies</h1>
-      <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+      <div id="piechart_3d" style="width: 900px; height: 500px;"></div><br>
     </section>
+    <header>
+      <h1>Jobs by Place</h1>
+    </header>
+    <% @jobs_by_location.each do |key, value| %>
+    <div class="card">
+      <h1><%= key %></h1>
+      <p class="title">Jobs:</p>
+      <p><%= value %></p>
+    </div>
+    <% end %>
+    <header>
+      <h1>Jobs by Interest</h1>
+    </header>
+    <% @count_of_jobs_by_interest.each do |key, value| %>
+    <div class="card">
+      <h1>Interest level: <%= key %></h1>
+      <p class="title">Jobs:</p>
+      <p><%= value %></p>
+    </div>
+    <% end %>
 
-    
   </body>
 
 
 <!-- <%= @count_of_jobs_by_interest %><br>
-<%= @jobs_by_location %><br>

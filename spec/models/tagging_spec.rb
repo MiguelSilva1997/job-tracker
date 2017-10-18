@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Tagging do
-  describe "validations" do
+  describe "relationships" do
     it "taggings respond to tag" do
       tagging = Tagging.new
       expect(tagging).to respond_to(:tag)
