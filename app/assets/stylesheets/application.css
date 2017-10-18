@@ -20,6 +20,10 @@
    flex-wrap: wrap;
  }
 
+ section {
+   
+ }
+
  .column {
    width: 100%;
    display: flex;

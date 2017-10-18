@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :categories
   root "welcome#welcome"
 
-  
+
   get '/dashboard', to: 'dashboard#index'
   get '/jobs', to: "jobs#sorted_jobs" , as: 'sorted_jobs'
 

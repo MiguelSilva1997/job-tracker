@@ -1,5 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe Tagging, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Tagging do
+  describe "validations" do
+    it "taggings respond to tag" do
+      tagging = Tagging.new
+      expect(tagging).to respond_to(:tag)
+    end
+
+    it "taggings respond to job" do
+      tagging = Tagging.new
+      expect(tagging).to respond_to(:job)
+    end
+  end
 end
