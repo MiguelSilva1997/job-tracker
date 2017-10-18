@@ -1,22 +1,23 @@
-Title: <%= @job.title %>
-<br>
+<header>
+  <h1>Title: <%= @job.title %></h1>
+  <h2>Description: <%= @job.description %></h2>
+  <h2>Level of Interest: <%= @job.level_of_interest %></h2>
+  <h2>City: <%= @job.city %></h2>
+  <h3><%= link_to "Edit", edit_company_job_path(@job.company, @job)%><br></h3>
+  <h3><%= link_to "delete", company_job_path(@job), method: "delete"%><br></h3>
+  <h3>Company: <%= link_to @job.company.name, company_path(@job.company) %><br></h3>
+  <section class="map-container">
+  <iframe
+    width="600"
+    height="450"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAA9FvZe6joGMF9CJzGK95FSm51CAVeLv4&q=<%= @job.city %>" allowfullscreen>
+  </iframe>
+  </section>
+  <h1><%= render partial: "comment_form" %></h1>
+    <h1>Comments</h1>
+  </header>
 
-Description: <%= @job.description %>
-<br>
-
-Level of Interest: <%= @job.level_of_interest %>
-<br>
-
-City: <%= @job.city %>
-<br>
-
-
-<%= render partial: "comment_form" %>
-
-<%= render partial: "comment", collection: @job.comments.reverse %>
-
-<%= link_to "Edit", edit_company_job_path(@job.company, @job)%><br>
-
-<%= link_to "delete", company_job_path(@job), method: "delete"%>
-
-Company: <%= link_to @job.company.name, company_path(@job.company) %>
+<section>
+    <%= render partial: "comment", collection: @job.comments.reverse %><br>
+</section>

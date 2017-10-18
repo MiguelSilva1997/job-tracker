@@ -10,8 +10,8 @@
     <p><button><%=link_to "Show", company_job_path(job.company, job)%></button></p>
   </div>
 <% end %>
-
-
-<%= render partial: "contact_form" %>
-
-<%= render partial: "contact", collection: @company.contacts.reverse %>
+  <header>
+    <h1>Contacts</h1><br>
+    <h1><%= render partial: "contact_form" %><br></h1>
+  </header>
+  <%= render partial: "contact", collection: @company.contacts.reverse %>
